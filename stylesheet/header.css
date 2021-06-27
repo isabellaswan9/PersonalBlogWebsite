@@ -1,0 +1,62 @@
+@charset "UTF-8";
+.header-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  grid-area: top;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: minmax(30px, 1fr) 6fr 1fr;
+  grid-template-areas: "nav sub-nav" "title title";
+  background-image: url("../img/background.jpg");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover;
+  height: 600px;
+}
+
+.header-title {
+  text-align: center;
+  grid-area: title;
+}
+
+.nav {
+  grid-area: nav;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: left;
+  align-items: center;
+}
+
+.nav-icon, .nav-link {
+  font-size: medium;
+  font-family: "Courier New", Courier, monospace;
+  color: white;
+  padding: 1%;
+}
+.nav-icon:hover, .nav-link:hover {
+  color: blue;
+  text-shadow: 2px 2px lightblue;
+}
+
+.sub-nav {
+  grid-area: sub-nav;
+  width: 30px;
+  display: flex;
+  flex-direction: row-reverse;
+  margin-left: auto;
+  align-items: center;
+}
+
+.nav-icon {
+  float: right;
+}
+
+#nav-search-btn {
+  content: "";
+}
+
+/*# sourceMappingURL=header.css.map */
